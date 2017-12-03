@@ -1,0 +1,176 @@
+// Button
+
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  white-space: nowrap;
+
+  @include user-select(none);
+
+  @include transition(background-color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease);
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus { outline: 0; }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus { text-decoration: none; }
+
+  &:active,
+  &.active {
+    outline: 0;
+    background-image: none;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: $cursorDisabled;
+    pointer-events: none;
+
+    color: white;
+    // text-shadow: none;
+    background-color: transparentize($mediumGray, 0.7);
+  }
+}
+
+// Sizing
+
+.btn {
+  // Default sizing (<input>'s)
+  height: 53px;
+  padding: 14px 20px 12px;
+  line-height: 23px;
+  font-size: 16px;
+  font-weight: $bold;
+}
+
+.btn-xs {
+  // Extra small sizing
+  height: 36px;
+  padding: 7px 12px 5px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: $extrabold;
+}
+
+.btn-sx {
+  // Small X sizing
+  height: 42px;
+  padding: 10px 16px 8px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: $extrabold;
+}
+
+.btn-sm {
+  // Small sizing
+  height: 44px;
+  padding: 11px 25px 9px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: $extrabold;
+}
+
+.btn-md {
+  // Medium sizing
+  height: 45px;
+  padding: 10px 17px 8px;
+  line-height: 23px;
+  font-size: 16px;
+  font-weight: $bold;
+}
+
+.btn-mx {
+  // Medium X sizing
+  height: 49px;
+  padding: 10px 18px 8px;
+  line-height: 23px;
+  font-size: 15px;
+  font-weight: $bold;
+}
+
+.btn-lg {
+  // Large sizing
+  height: 60px;
+  padding: 16px 30px 14px;
+  line-height: 26px;
+  font-size: 20px;
+  font-weight: $bold;
+}
+
+.btn-xl {
+  // Extra large sizing
+  height: 64px;
+  padding: 18px 42px 16px;
+  line-height: 26px;
+  font-size: 20px;
+  font-weight: $semibold;
+}
+
+.btn-search {
+  // Search custom sizing
+  height: 44px;
+  padding: 9px 22px 8px;
+  line-height: 22px;
+  font-size: 14px;
+  font-weight: $extrabold;
+}
+
+.btn-pair {
+  // Custom sizing
+  height: 52px;
+  padding: 14px 27px 12px;
+  line-height: 22px;
+  font-size: 14px;
+  font-weight: $extrabold;
+}
+
+// Colors
+
+.btn {
+  // Default colors
+  color: white;
+  background-color: darken($gray, 5%);
+  text-shadow: $btnTextShadow;
+
+  &:hover,
+  &:focus,
+  &.focus { background-color: darken($gray, 10%); }
+}
+
+.btn-primary {
+  background-color: $brandBlue;
+  text-shadow: $btnTextShadow;
+
+  &:hover,
+  &:focus,
+  &.focus { background-color: $brandBlueAccent; }
+}
+
+.btn-border {
+  color: $brandBlue;
+  border-color: $lightestGray;
+  background-color: transparent;
+  text-shadow: none;
+
+  &:hover,
+  &:focus,
+  &.focus {
+    background-color: transparent;
+    border-color: darken($lightestGray, 5%);
+  }
+}
+
+.btn-danger { color: $danger; }

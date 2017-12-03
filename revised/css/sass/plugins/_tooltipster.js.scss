@@ -1,0 +1,156 @@
+/* This is the core CSS of Tooltipster */
+
+/* GENERAL STRUCTURE RULES (do not edit this section) */
+
+.tooltipster-base {
+  /* this ensures that a constrained height set by functionPosition,
+  if greater that the natural height of the tooltip, will be enforced
+  in browsers that support display:flex */
+  display: flex;
+  pointer-events: none;
+  /* this may be overriden in JS for fixed position origins */
+  position: absolute;
+}
+
+.tooltipster-box {
+  /* see .tooltipster-base. flex-shrink 1 is only necessary for IE10-
+  and flex-basis auto for IE11- (at least) */
+  flex: 1 1 auto;
+  padding: 4px 8px 1px;
+
+  background: $darkestGray;
+  border-radius: 3px;
+  box-shadow: $dropdownShadow;
+
+  color: white;
+  font-size: 13px;
+  font-weight: $bold;
+
+}
+
+.tooltipster-content {
+  position: relative;
+
+  /* these make sure we'll be able to detect any overflow */
+  max-height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+
+  &:after {
+    content: ' ';
+    display: block;
+    @include position(absolute, null 0 -8px);
+    margin: 0 auto;
+    @include size(10px 6px);
+
+    background: url(../images/Sprite.png) no-repeat -100px -68px;
+    background-size: 320px 400px;
+  }
+}
+
+.tooltipster-ruler {
+  /* these let us test the size of the tooltip without overflowing the window */
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  visibility: hidden;
+}
+
+/* ANIMATIONS */
+
+/* Open/close animations */
+
+/* fade */
+
+.tooltipster-fade {
+  opacity: 0;
+
+  @include transition-property(opacity);
+}
+
+.tooltipster-fade.tooltipster-show { opacity: 1; }
+
+/* grow */
+
+.tooltipster-grow {
+  @include transform(scale(0, 0));
+  @include transition-property(transform);
+  -webkit-backface-visibility: hidden;
+}
+
+.tooltipster-grow.tooltipster-show {
+  @include transform(scale(1, 1));
+  @include transition-timing-function(ease);
+}
+
+/* swing */
+
+.tooltipster-swing {
+  opacity: 0;
+
+  @include transform(rotateZ(4deg));
+  @include transition-property(transform, opacity);
+}
+
+.tooltipster-swing.tooltipster-show {
+  opacity: 1;
+
+  @include transform(rotateZ(0deg));
+  @include transition-timing-function(ease);
+}
+
+/* fall */
+
+.tooltipster-fall {
+  @include transition-property(top);
+  @include transition-timing-function(ease);
+}
+
+.tooltipster-fall.tooltipster-initial { top: 0 !important; }
+
+.tooltipster-fall.tooltipster-show {}
+
+.tooltipster-fall.tooltipster-dying {
+  top: 0 !important;
+  opacity: 0;
+
+  @include transition-property(all);
+}
+
+/* slide */
+
+.tooltipster-slide {
+  @include transition-property(left);
+  @include transition-timing-function(ease);
+}
+
+.tooltipster-slide.tooltipster-initial { left: -40px !important; }
+
+.tooltipster-slide.tooltipster-show {}
+
+.tooltipster-slide.tooltipster-dying {
+  left: 0 !important;
+  opacity: 0;
+  @include transition-property(all);
+}
+
+/* Update animations */
+
+/* We use animations rather than transitions here because
+ transition durations may be specified in the style tag due to
+ animationDuration, and we try to avoid collisions and the use
+ of !important */
+
+/* fade */
+
+@keyframes tooltipsterFade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.tooltipster-update-fade {
+  @include animation(tooltipsterFade 0.4s);
+}

@@ -1,0 +1,56 @@
+.start {
+  padding: 72px 0 80px;
+}
+
+.start-hey {
+  margin: 0 0 53px;
+
+  h4 {
+    margin: 0 0 20px;
+
+    color: $brandBlue;
+    font-weight: $light;
+  }
+
+  p { max-width: 600px; }
+}
+
+.start-actions {}
+
+.start-actions-main {
+  margin: 0 0 40px;
+  padding: 36px 40px 33px;
+
+  border: 2px solid $lightestGray;
+  border-radius: 3px;
+
+  h6 {
+    margin: 0 0 8px;
+    font-size: 14px;
+    font-weight: $bold;
+  }
+
+  p {
+    margin: 0 0 9px;
+    font-size: 14px;
+  }
+}
+
+.start-actions-integration {
+  position: relative;
+  padding: 35px 40px 34px;
+
+  border: 2px solid $lightestGray;
+  border-radius: 3px;
+
+  h6 {
+    margin: 0 0 8px;
+
+    font-size: 16px;
+    font-weight: $semibold;
+  }
+
+  p { font-size: 14px; }
+
+  .btn { @include position(absolute, 34px 40px null null); }
+}

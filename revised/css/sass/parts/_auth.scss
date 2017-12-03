@@ -1,0 +1,513 @@
+// Auth pages
+
+.auth-container {
+  width: 100%;
+  // max-width: 320px;
+  margin: 0 auto;
+
+  padding: 89px 0 120px;
+}
+
+.auth-head {
+  text-align: center;
+  margin: 0 0 25px;
+
+  > h4 { margin: 0 0 14px; }
+
+  > .lead { font-size: 18px; }
+}
+
+.auth-submit {
+  text-align: center;
+
+  > .btn { min-width: 220px; }
+}
+
+// Forgot
+
+.auth-forgot {
+  max-width: 320px;
+
+  .auth-head {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 26px;
+  }
+
+  .auth-fieldset { margin: 0 0 30px; }
+}
+
+.auth-submit-grid {
+  margin: 0 -15px;
+  @include clearfix();
+}
+
+.auth-submit-col {
+  float: right;
+  width: 50%;
+  padding: 0 15px;
+
+  > .btn { width: 100%; }
+}
+
+// Join
+
+.auth-register {
+  max-width: 320px;
+
+  .auth-fieldset { margin: 0 0 25px; }
+}
+
+.auth-usertype {
+  display: inline-block;
+  margin: 5px 0;
+
+  padding: 3px 9px 2px;
+  background: $brandBlue;
+  border-radius: 2px;
+
+  color: white;
+  font-size: 14px;
+  font-weight: $bold;
+
+  > strong { font-weight: $extrabold; }
+}
+
+.auth-terms {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 34px;
+
+  font-size: 14px;
+  text-align: center;
+}
+
+// Login
+
+.auth-login {
+  max-width: 300px;
+
+  .auth-fieldset { margin: 0 0 23px; }
+}
+
+.auth-remember {
+  text-align: center;
+  margin: 0 0 43px;
+}
+
+// Profile
+
+.onboarding {
+  position: relative;
+
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+
+  padding: 94px 0 120px;
+}
+
+.onboarding-aside {
+  // float: left;
+  // max-width: 260px;
+
+  @include position(absolute, 94px null null 0);
+  max-width: 260px;
+
+  > h5 { margin: 0 0 34px; }
+}
+
+.onboarding-form { padding-left: 300px; }
+
+.onboarding-form-profile { padding-top: 7px; }
+.onboarding-form-work,
+.onboarding-form-ats,
+.onboarding-form-contact { padding-top: 11px; }
+
+.onboarding-avatar {
+  margin: 0 0 33px;
+
+  .file-control-addon {
+    max-width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.onboarding-avatar-import {
+  position: relative;
+  top: 1px;
+
+  margin: 0 0 0 16px;
+  display: inline-block;
+  font-size: 14px;
+  color: $gray;
+}
+
+.onboarding-avatar-actions {
+  padding: 2px 0 0;
+  @include clearfix();
+}
+
+.onboarding-avatar-display {
+  float: right;
+  position: relative;
+  cursor: pointer;
+
+  @include size(79px);
+  border: 2px solid #EEF1F7;
+  border-radius: 4px;
+
+  &:hover {
+    .onboarding-avatar-display-back { opacity: 0.75; }
+  }
+}
+
+.onboarding-avatar-display-back {
+  display: block;
+
+  @include position(absolute, 2px);
+  z-index: 1;
+
+  background: #EEF1F7;
+  border-radius: 3px;
+
+  @include transition(opacity 0.3s ease);
+
+  .sprite { @include position(absolute, 16px null null 16px); }
+}
+
+.onboarding-avatar-display-face {
+  @include position(absolute, 2px);
+  z-index: 2;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 3px;
+}
+
+.onboarding-avatar-actions-inner {
+  .file-control { display: inline-block; }
+}
+
+.onboarding-profile { margin: 0 0 41px; }
+
+.onboarding-profile-fieldset {
+  margin: 0 0 24px;
+
+  &:last-child { margin: 0; }
+
+  .labeled-divider { margin: 0 0 9px; }
+}
+
+.onboarding-profile-grid {
+  @include clearfix();
+  margin: 0 -15px;
+}
+
+.onboarding-profile-col {
+  float: left;
+  width: 50%;
+  display: inline;
+  padding: 0 15px;
+  margin: 0 0 19px;
+}
+
+.onboarding-actions {
+  .btn { width: 100%; }
+}
+
+// Work
+
+.onboarding-company-display {
+  @include position(absolute, 0 null null 0);
+  cursor: pointer;
+
+  @include size(53px);
+  border: 2px solid #EEF1F7;
+  border-radius: 4px;
+}
+
+.onboarding-company-display-back {
+  display: block;
+
+  @include position(absolute, 2px);
+  z-index: 1;
+
+  background: #EEF1F7;
+  border-radius: 3px;
+
+  @include transition(opacity 0.3s ease);
+
+  .sprite { @include position(absolute, 8px null null 10px); }
+}
+
+.onboarding-company-display-logo {
+  @include position(absolute, 2px);
+  z-index: 2;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 3px;
+}
+
+.onboarding-company-search { margin: 0 0 58px; }
+
+.onboarding-company-search-inner {
+  position: relative;
+  padding: 0 0 0 75px;
+
+  .input-group-addon { padding: 0 0 0 22px; }
+}
+
+.onboarding-work-alts {
+  font-size: 14px;
+}
+
+.onboarding-work-unsetup { margin: 0 0 73px; }
+
+.onboarding-work-unsetup-head {
+  margin: 0 0 23px;
+  @include clearfix();
+
+  .s-register-noATS {
+    float: left;
+
+    @include position(relative, null null null -2px);
+  }
+}
+
+.onboarding-work-unsetup-title {
+  padding: 5px 0 0;
+  margin-left: 54px;
+
+  color: $darkGray;
+  font-weight: $semibold;
+  font-size: 17px;
+
+  strong {
+    display: block;
+    margin: 0 0 1px;
+
+    color: $gray;
+    font-weight: $bold;
+    font-size: 12px;
+  }
+}
+
+.onboarding-work-grid {
+  margin: 0 -20px 56px;
+  @include clearfix();
+}
+
+.onboarding-work-col {
+  float: left;
+  width: 50%;
+  padding: 0 20px;
+}
+
+.onboarding-work-alt {
+  padding: 33px 30px 38px;
+  text-align: center;
+
+  .btn { margin: 24px 0 0; }
+}
+
+.onboarding-work-alt-icon {
+  @include position(absolute, -41px 0 null);
+  margin: 0 auto;
+
+  @include size(80px);
+  border: 2px solid $whiteGray;
+  border-radius: 50%;
+  background: white;
+
+  .sprite {
+    @include position(absolute, 50% 0 null);
+    z-index: 2;
+    margin: -18px auto 0;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    @include position(absolute, 39px -2px -2px);
+    background: white;
+  }
+}
+
+.onboarding-work-alt-title {
+  margin: 0 0 9px;
+  color: $darkGray;
+  font-weight: $semibold;
+  font-size: 15px;
+}
+
+.onboarding-work-later {
+  text-align: center;
+  color: $gray;
+  font-weight: $semibold;
+  font-size: 13px;
+}
+
+// Select ATS
+
+.onboarding-select-ats { border-radius: 5px 5px 0 0; }
+
+.onboarding-select-ats-grid {
+  margin: 0 -12px -24px;
+  @include clearfix();
+}
+
+.onboarding-select-ats-col {
+  float: left;
+  width: 33.33333333%;
+  padding: 0 12px 24px;
+}
+
+.onboarding-ats-option {
+  input {
+    @include size(0.1px);
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+
+    // &:focus + label { background-color: $brandBlueAccent; }
+
+    &:checked {
+      + .onboarding-ats-option-card {
+        border-color: $brandBlue;
+
+        .onboarding-ats-option-check {
+          border-color: $brandBlue;
+
+          opacity: 1;
+          visibility: visible;
+
+          @include transform(translateX(0));
+        }
+      }
+    }
+
+    &:disabled {
+      + .onboarding-ats-option-card {
+        border-color: $whiteGray;
+        // background-color: transparentize($whiteGray, 0.6);
+        cursor: $cursorDisabled;
+
+        img {
+          opacity: 0.25;
+          // filter: blur(2px);
+          filter: grayscale(40%);
+        }
+      }
+    }
+  }
+}
+
+.onboarding-ats-option-card {
+  position: relative;
+  cursor: pointer;
+
+  display: block;
+  @include size(100% 86px);
+
+  background: white;
+  border: 2px solid $lightestGray;
+  border-radius: 5px;
+
+  @include transition(border-color 0.3s ease);
+
+  img {
+    display: block;
+    @include position(absolute, 50% 0 null);
+    margin: -24px auto 0;
+
+    @include size(114px 48px);
+  }
+}
+
+.onboarding-ats-option-check {
+  display: block;
+  @include position(absolute, -11px -11px null null);
+
+  @include size(23px);
+
+  background: white;
+  border: 2px solid $lightestGray;
+  border-radius: 50%;
+
+  opacity: 0;
+  visibility: hidden;
+
+  @include transform(translateX(-1px));
+
+  @include transition(transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, border-color 0.3s ease);
+
+  .sprite { @include position(absolute, 1px null null 1px); }
+}
+
+.onboarding-ats-more {
+  position: relative;
+  @include size(100% 86px);
+
+  color: $gray;
+  font-size: 14px;
+  font-weight: $bold;
+
+  text-align: center;
+
+  > p {
+    @include position(absolute, 50% 0 null);
+    margin: -10px auto 0;
+  }
+}
+
+.onboarding-ats-footer {
+  padding: 25px 30px 30px;
+
+  border-top: 0;
+  border-radius: 0 0 5px 5px;
+}
+
+.onboarding-ats-instructions {
+  font-size: 14px;
+  margin: 0 0 34px;
+
+  .important { color: $brandBlue; }
+}
+
+.onboarding-ats-actions {
+  @include clearfix();
+
+  .btn { float: right; }
+
+  .back {
+    margin: 10px 0 0 -5px;
+    float: left;
+  }
+}
+
+// Contact
+
+.onboarding-contact-ats { border-radius: 5px 5px 0 0; }
+
+.onboarding-contact-ats-grid {
+  margin: 0 -12px -24px;
+  @include clearfix();
+}
+
+.onboarding-contact-ats-name,
+.onboarding-contact-ats-email,
+.onboarding-contact-ats-phone {
+  float: left;
+  padding: 0 12px 24px;
+}
+
+.onboarding-contact-ats-name { width: 100%; }
+.onboarding-contact-ats-email { width: 54%; }
+.onboarding-contact-ats-phone { width: 46%; }

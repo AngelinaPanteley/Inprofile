@@ -1,0 +1,24 @@
+.footer {
+  @include clearfix();
+
+  padding: 35px 40px 34px;
+  border-top: 2px solid $whiteGray;
+
+  color: $mediumGray;
+  font-size: 14px;
+}
+
+.footer-navigation {
+  float: right;
+
+  > a {
+    color: $mediumGray;
+    margin-left: 33px;
+  }
+}
+
+.footer-copyright {
+  float: left;
+
+  font-weight: $bold;
+}

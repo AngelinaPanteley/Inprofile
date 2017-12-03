@@ -1,0 +1,156 @@
+// Score
+
+.score {
+  font-size: 22px;
+
+  > span { position: relative; }
+}
+
+.score-xs {
+  > b {
+    font-size: 15px;
+    font-weight: $black;
+  }
+
+  > span {
+    left: 1px; top: -1px;
+
+    font-size: 18px;
+    font-weight: $black;
+  }
+}
+
+.score-A { color: #6CD06E; }
+.score-B { color: #B5D06C; }
+.score-C { color: #D0B36C; }
+.score-D { color: #D0886C; }
+.score-U { color: $gray; }
+
+// Label
+
+.label {
+  display: inline-block;
+  padding: 3px 6px 0;
+
+  color: #B58B40;
+  font-size: 13px;
+  font-weight: $extrabold;
+
+  background: #FED58B;
+  border-radius: 2px;
+}
+
+// Pagination
+
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 0;
+
+  @include clearfix();
+
+  .s-pagination-prev,
+  .s-pagination-next { @include transition(transform $transitionsTiming ease); }
+
+  > li {
+    display: inline; // Remove list-style and block-level defaults
+    float: left;
+
+    > a,
+    > span {
+      position: relative;
+      float: left;
+      @include size(28px);
+      margin: 0 11px;
+
+      border-radius: 2px;
+      padding: 4px 2px 0;
+
+      color: $mediumGray;
+      font-size: 14px;
+      font-weight: $extrabold;
+      text-align: center;
+      text-decoration: none;
+
+      @include transition-property(color, background);
+
+      .sprite {
+        position: relative;
+        margin: 0 auto;
+        top: 3px;
+      }
+    }
+  }
+
+  > li > a,
+  > li > span {
+    &:hover,
+    &:focus {
+      z-index: 2;
+      color: $brandBlue;
+      background: transparentize($brandBlue, 0.925);
+
+      .s-pagination-prev { @include transform(translateX(-3px)); }
+      .s-pagination-next { @include transform(translateX(3px)); }
+    }
+  }
+
+  > li:first-child > a,
+  > li:last-child > a {
+    &:hover,
+    &:focus {
+      background: none;
+    }
+  }
+
+  > .active > a,
+  > .active > span {
+    &,
+    &:hover,
+    &:focus {
+      z-index: 3;
+      color: white;
+      text-shadow: $btnTextShadow;
+      background-color: $brandBlue;
+      cursor: default;
+    }
+  }
+
+  > .disabled {
+    > span,
+    > span:hover,
+    > span:focus,
+    > a,
+    > a:hover,
+    > a:focus {
+      opacity: 0.4;
+      // color: $pagination-disabled-color;
+      // background-color: $pagination-disabled-bg;
+      // border-color: $pagination-disabled-border;
+      cursor: $cursorDisabled;
+
+      .s-pagination-prev { @include transform(none); }
+      .s-pagination-next { @include transform(none); }
+    }
+  }
+}
+
+// Box
+
+.box { position: relative; }
+
+.box-border {
+  border: 2px solid $whiteGray;
+  border-radius: 5px;
+}
+
+.box-labeled {
+  padding: 30px;
+
+  > .label-control {
+    @include position(absolute, -10px null null 20px);
+
+    padding: 0 10px;
+    background: white;
+  }
+}

@@ -1,0 +1,108 @@
+.add-btn {
+  @include position(absolute, 6px 0px null null);
+  height: 38px;
+  padding: 10px 11px 10px;
+}
+
+.cancel-link {
+  @extend .btn-xs;
+  color: $gray;
+}
+
+.account-box-integration {
+  @include position();
+  font-size: 14px;
+  margin: 34px 0 80px;
+  padding: 24px 24px 19px;
+
+  .account-box-head-inner {
+    color: $gray;
+    float: left;
+    padding: 13px 0 0 18px;
+  }
+
+  .btn,
+  .cancel-link {
+    float: right;
+    margin: 5px 0 0 12px;
+  }
+
+  .btn-border { color: #789db5; }
+
+  &:after {
+    @include position(absolute, null null -42px 0);
+    @include size(100% 1px);
+    background-color: $whiteGray;
+    content: "";
+    display: block;
+  }
+
+  &:last-child:after { display: none; }
+}
+
+.account-box-integration-logo {
+  img { @include size(44px); }
+}
+
+.account-box-integration-content { padding-top: 19px; }
+
+.account-integration-grid {
+  margin: 13px -11px 23px;
+
+  .account-col { padding: 0 11px; }
+
+  &:last-child { margin-bottom: 23px; }
+}
+
+.account-connected-integration-grid {
+  margin: 0 0 10px;
+  padding-top: 4px;
+
+  .col-md-17 {
+    float: left;
+    margin-left: 3px;
+    width: 17%;
+  }
+
+  .col-md-83 {
+    @include calc(width, "83% - 3px");
+    float: left;
+  }
+}
+
+.account-box-integration-footer {
+  border-top: 1px solid $lightestGray;
+  font-size: 13px;
+  line-height: 20px;
+  padding-top: 21px;
+}
+
+.account-box-integration-label {
+  color: $mediumGray;
+  font-size: 12px;
+  font-weight: $semibold;
+  line-height: 28px;
+}
+
+.account-box-integration-key {
+  background-color: rgba(30, 155, 255, 0.1);
+  border-radius: 3px;
+  border: solid 1px rgba(30, 155, 255, 0.15);
+  color: $recruiterBlue;
+  display: inline-block;
+  font-weight: $semibold;
+  line-height: 19px;
+  padding: 4px 8px;
+}
+
+.account-box-integration-date {
+  color: $darkGray;
+  font-weight: $semibold;
+  line-height: 30px;
+}
+
+.account-box-integration-status {
+  color: #37d47f;
+  font-weight: $extrabold;
+  line-height: 30px;
+}

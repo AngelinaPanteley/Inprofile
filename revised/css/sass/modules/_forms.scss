@@ -1,0 +1,406 @@
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-width: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  // margin-bottom: value;
+  // font-size: value;
+  line-height: inherit;
+  // color: value;
+  border: 0;
+  // border-bottom: value;
+}
+
+label,
+.label-control {
+  display: inline-block;
+  max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+
+  .note {
+    font-size: 13px;
+    font-weight: $normal;
+    font-style: normal;
+    color: $lightGray;
+    margin-left: 6px;
+  }
+
+  .optional {
+    font-size: 12px;
+    font-weight: $normal;
+    font-style: italic;
+    color: $gray;
+    margin-left: 1px;
+  }
+}
+
+.form-group > label,
+.label-control {
+  font-size: 13px;
+  font-weight: $bold;
+  color: $mediumGray;
+  margin: 0 0 8px;
+}
+
+.form-group {
+  .note {
+    margin-top: 6px;
+    font-size: 12px;
+    font-weight: $semibold;
+  }
+}
+
+// Override content-box in Normalize (* isn't specific enough)
+input[type="search"] { @include box-sizing(border-box); }
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9; // IE8-9
+  line-height: normal;
+}
+
+input[type="file"] { display: block; }
+
+input[type="range"] {
+  display: block;
+  width: 100%;
+}
+
+select[multiple],
+select[size] { height: auto; }
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus { }
+
+output {
+  display: block;
+  // padding-top: value;
+  // font-size: value;
+  // line-height: value;
+  // color: value;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+
+  // padding: 15px 16px 14px;
+  // padding: 0.25em 16px 0.25em;
+  // padding: 6px 16px 5px;
+  // font-size: 18px;
+  // line-height: 1.5em;
+  // line-height: 38px;
+  // height: 53px;
+
+  color: $darkestGray;
+
+  background-color: white;
+  background-image: none;
+
+  outline: 0 none;
+  border: 2px solid $inputBorderColor;
+  border-radius: $inputBorderRadius;
+
+  @include transition(border-color ease $transitionsTiming);
+
+  // &[type="password"] {
+  //   // Safari fix for password input's line-height
+  //   padding: 13px 16px 16px;
+  // }
+
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    // background-color: value;
+    opacity: 0.4; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+  }
+
+  &[disabled],
+  fieldset[disabled] & { cursor: $cursorDisabled; }
+
+  &:focus { border-color: $brandBlue; }
+}
+
+.double-input {
+  position: relative;
+
+  background-color: white;
+  background-image: none;
+  border: 2px solid $inputBorderColor;
+  border-radius: 5px;
+
+  @include transition(border-color 0.3s ease);
+
+  @include clearfix();
+
+  &.on-focus { border-color: $brandBlue; }
+
+  .form-control {
+    float: left;
+    width: 50%;
+    height: 49px;
+    border: 0 none;
+
+    &:last-child { padding-left: 17px; }
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    @include position(absolute, 12px 0 null);
+    margin: 0 auto;
+    @include size(2px 25px);
+    border-radius: 1px;
+    background: $inputBorderColor;
+  }
+}
+
+textarea.form-control {
+  height: 92px;
+  resize: none;
+}
+
+// Size
+
+.form-control {
+  padding: 4px 15px 3px;
+  font-size: 15px;
+  line-height: 36px;
+  height: 47px;
+}
+
+.form-control-lg {
+  padding: 6px 16px 5px;
+  font-size: 18px;
+  line-height: 38px;
+  height: 53px;
+}
+
+// Placeholders
+
+::-webkit-input-placeholder {
+  color: $inputPlaceholder;
+  opacity: 1;
+
+  @include transition(color ease $transitionsTiming);
+}
+
+:-moz-placeholder {
+  color: $inputPlaceholder;
+  opacity: 1;
+
+  @include transition(color ease $transitionsTiming);
+}
+
+::-moz-placeholder {
+  color: $inputPlaceholder;
+  opacity: 1;
+
+  @include transition(color ease $transitionsTiming);
+}
+
+:-ms-input-placeholder {
+  color: $inputPlaceholder;
+  opacity: 1;
+
+  @include transition(color ease $transitionsTiming);
+}
+
+// :focus:-ms-input-placeholder { }
+// :focus::-moz-placeholder { }
+// :focus:-moz-placeholder { }
+// :focus::-webkit-input-placeholder { }
+
+// Autofill background
+//
+// This delays the appearance of the hideous yellow background when an input autofills
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus { @include transition(background-color 0.3s ease-in-out 360s, color 0.3s ease-in-out 360s, border-color ease $transitionsTiming, box-shadow ease $transitionsTiming); }
+
+// Search inputs in iOS
+//
+// This overrides the extra rounded corners on search inputs in iOS so that our
+// `.form-control` class can properly style them. Note that this cannot simply
+// be added to `.form-control` as it's not specific enough. For details, see
+// https://github.com/twbs/bootstrap/issues/11586.
+
+input[type="search"] { -webkit-appearance: none; }
+
+// Special styles for iOS temporal inputs
+//
+// In Mobile Safari, setting `display: block` on temporal inputs causes the
+// text within the input to become vertically misaligned. As a workaround, we
+// set a pixel line-height that matches the given height of the input, but only
+// for Safari. See https://bugs.webkit.org/show_bug.cgi?id=139848
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"],
+  input[type="month"] { line-height: $lineHeight; }
+}
+
+.form-group {
+  margin-bottom: 19px;
+
+  &:last-child { margin-bottom: 0; }
+}
+
+.radio,
+.checkbox {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  label {
+    // min-height: value; // Ensure the input doesn't jump when there is no text
+    padding-left: 27px;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+  }
+}
+
+// .radio input[type="radio"],
+// .radio-inline input[type="radio"],
+// .checkbox input[type="checkbox"],
+// .checkbox-inline input[type="checkbox"] {
+//   position: absolute;
+//   margin-left: -20px;
+//   margin-top: 4px \9;
+// }
+
+.radio .radio-custom,
+.radio-inline .radio-custom,
+.checkbox .checkbox-custom,
+.checkbox-inline .checkbox-custom {
+  position: absolute;
+  margin-left: -27px;
+  margin-top: 3px;
+  margin-top: 4px \9;
+}
+
+.radio + .radio,
+.checkbox + .checkbox { margin-top: -5px; }
+
+.radio-inline,
+.checkbox-inline {
+  position: relative;
+  display: inline-block;
+  padding-left: 20px;
+  margin-bottom: 0;
+  vertical-align: middle;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+  margin-top: 0;
+  margin-left: 10px; // space out consecutive inline controls
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  &[disabled],
+  &.disabled,
+  fieldset[disabled] & { cursor: $cursorDisabled; }
+}
+
+.radio-inline,
+.checkbox-inline {
+  &.disabled,
+  fieldset[disabled] & { cursor: $cursorDisabled; }
+}
+
+.radio,
+.checkbox {
+  &.disabled,
+  fieldset[disabled] & {
+    label { cursor: $cursorDisabled; }
+  }
+}
+
+// Input group
+
+.input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+
+  > .form-control,
+  > .form-replace {
+    display: table-cell;
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+.input-group-addon {
+  display: table-cell;
+  padding: 0 0 0 30px;
+
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+// Input password
+
+.input-password {
+  position: relative;
+
+  > .form-control { padding-right: 92px; }
+}
+
+.input-link {
+  display: inline-block;
+  @include position(absolute, 50% 11px null null);
+  margin: -15px 0 0;
+  padding: 6px;
+
+  font-size: 12px;
+  font-weight: $extrabold;
+
+  &:after {
+    content: "";
+    display: block;
+    @include position(absolute, 4px null null -11px);
+    @include size(2px 21px);
+    background: $inputBorderColor;
+    border-radius: 1px;
+  }
+}
+
+// File input
+
+.file-control {
+  input {
+    @include size(0.1px);
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+
+    &:focus + label { background-color: $brandBlueAccent; }
+  }
+}

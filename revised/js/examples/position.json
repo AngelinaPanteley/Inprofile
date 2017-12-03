@@ -1,0 +1,400 @@
+[
+  {
+    "recruiters": "234",
+    "value": "Designer",
+    "tokens": [
+      "Designer"
+    ]
+  },
+  {
+    "recruiters": "624",
+    "value": "Brand Designer",
+    "tokens": [
+      "Brand",
+      "Designer"
+    ]
+  },
+  {
+    "recruiters": "613",
+    "value": "Mobile Designer",
+    "tokens": [
+      "Mobile",
+      "Designer"
+    ]
+  },
+  {
+    "recruiters": "662",
+    "value": "Architect",
+    "tokens": [
+      "Architect"
+    ]
+  },
+  {
+    "recruiters": "984",
+    "value": "Accountant",
+    "tokens": [
+      "Accountant"
+    ]
+  },
+  {
+    "recruiters": "861",
+    "value": "Product Designer",
+    "tokens": [
+      "Product",
+      "Designer"
+    ]
+  },
+  {
+    "recruiters": "125",
+    "value": "Motion Designer",
+    "tokens": [
+      "Motion",
+      "Designer"
+    ]
+  },
+  {
+    "recruiters": "412",
+    "value": "Logo Designer",
+    "tokens": [
+      "Logo",
+      "Designer"
+    ]
+  },
+  {
+    "recruiters": "123",
+    "value": "FX Designer",
+    "tokens": [
+      "FX",
+      "Designer"
+    ]
+  },
+  {
+    "recruiters": "322",
+    "value": "Producer",
+    "tokens": [
+      "Producer"
+    ]
+  },
+  {
+    "recruiters": "462",
+    "value": "UX/UI Designer",
+    "tokens": [
+      "UX",
+      "UI",
+      "Designer"
+    ]
+  },
+  {
+    "recruiters": "25",
+    "value": "Typeface Designer",
+    "tokens": [
+      "Typeface",
+      "Designer"
+    ]
+  },
+  {
+    "recruiters": "61",
+    "value": "Front-end Developer",
+    "tokens": [
+      "Front-end",
+      "Developer"
+    ]
+  },
+  {
+    "recruiters": "71",
+    "value": "C++ Developer",
+    "tokens": [
+      "C++",
+      "Developer"
+    ]
+  },
+  {
+    "recruiters": "35",
+    "value": "Product Manager",
+    "tokens": [
+      "Product",
+      "Manager"
+    ]
+  },
+  {
+    "recruiters": "422",
+    "value": "Director",
+    "tokens": [
+      "Director"
+    ]
+  },
+  {
+    "recruiters": "197237",
+    "value": "Creative Director",
+    "tokens": [
+      "Creative",
+      "Director"
+    ]
+  },
+  {
+    "recruiters": "261",
+    "value": "Lobbyist",
+    "tokens": [
+      "Lobbyist"
+    ]
+  },
+  {
+    "recruiters": "257",
+    "value": "Art Director",
+    "tokens": [
+      "Art",
+      "Director"
+    ]
+  },
+  {
+    "recruiters": "3577",
+    "value": "Graphic Designer",
+    "tokens": [
+      "Graphic",
+      "Designer"
+    ]
+  },
+  {
+    "recruiters": "332",
+    "value": "UI Designer",
+    "tokens": [
+      "UI",
+      "Designer"
+    ]
+  },
+  {
+    "recruiters": "123",
+    "value": "UX Designer",
+    "tokens": [
+      "UX",
+      "Designer"
+    ]
+  },
+  {
+    "recruiters": "32",
+    "value": "Account Manager",
+    "tokens": [
+      "Account",
+      "Manager"
+    ]
+  },
+  {
+    "recruiters": "66",
+    "value": "President",
+    "tokens": [
+      "President"
+    ]
+  },
+  {
+    "recruiters": "67",
+    "value": "Media Designer",
+    "tokens": [
+      "Media",
+      "Designer"
+    ]
+  },
+  {
+    "recruiters": "7",
+    "value": "Maker",
+    "tokens": [
+      "Maker"
+    ]
+  },
+  {
+    "recruiters": "777",
+    "value": "Engineer",
+    "tokens": [
+      "Engineer"
+    ]
+  },
+  {
+    "recruiters": "743",
+    "value": "DataViz Developer",
+    "tokens": [
+      "DataViz",
+      "Developer"
+    ]
+  },
+  {
+    "recruiters": "234",
+    "value": "Sysadmin",
+    "tokens": [
+      "Sysadmin"
+    ]
+  },
+  {
+    "recruiters": "341",
+    "value": "Press Secretary",
+    "tokens": [
+      "Press",
+      "Secretary"
+    ]
+  },
+  {
+    "recruiters": "123",
+    "value": "Chief Executive Officer",
+    "tokens": [
+      "Chief",
+      "Executive",
+      "Officer"
+    ]
+  },
+  {
+    "recruiters": "522",
+    "value": "Consultant",
+    "tokens": [
+      "Consultant"
+    ]
+  },
+  {
+    "recruiters": "674",
+    "value": "Investment Banker",
+    "tokens": [
+      "Investment",
+      "Banker"
+    ]
+  },
+  {
+    "recruiters": "3566",
+    "value": "HR Manager",
+    "tokens": [
+      "HR",
+      "Manager"
+    ]
+  },
+  {
+    "recruiters": "1245",
+    "value": "Lawyer",
+    "tokens": [
+      "Lawyer"
+    ]
+  },
+  {
+    "recruiters": "75",
+    "value": "Insurance Agent",
+    "tokens": [
+      "Insurance",
+      "Agent"
+    ]
+  },
+  {
+    "recruiters": "844",
+    "value": "Judge",
+    "tokens": [
+      "Judge"
+    ]
+  },
+  {
+    "recruiters": "985",
+    "value": "Social Worker",
+    "tokens": [
+      "Social",
+      "Worker"
+    ]
+  },
+  {
+    "recruiters": "9995",
+    "value": "Sales Director",
+    "tokens": [
+      "Sales",
+      "Director"
+    ]
+  },
+  {
+    "recruiters": "555",
+    "value": "Doctor",
+    "tokens": [
+      "Doctor"
+    ]
+  },
+  {
+    "recruiters": "95867",
+    "value": "Career Counselor",
+    "tokens": [
+      "Career",
+      "Counselor"
+    ]
+  },
+  {
+    "recruiters": "657",
+    "value": "Programmer",
+    "tokens": [
+      "Programmer"
+    ]
+  },
+  {
+    "recruiters": "8345",
+    "value": "Software Developer",
+    "tokens": [
+      "Software",
+      "Developer"
+    ]
+  },
+  {
+    "recruiters": "6734",
+    "value": "Teacher",
+    "tokens": [
+      "Teacher"
+    ]
+  },
+  {
+    "recruiters": "563",
+    "value": "Psychologist",
+    "tokens": [
+      "Psychologist"
+    ]
+  },
+  {
+    "recruiters": "47",
+    "value": "Federal Agent",
+    "tokens": [
+      "Federal",
+      "Agent"
+    ]
+  },
+  {
+    "recruiters": "855",
+    "value": "Chief Financial Officer",
+    "tokens": [
+      "Chief",
+      "Financial",
+      "Officer"
+    ]
+  },
+  {
+    "recruiters": "458",
+    "value": "Writer",
+    "tokens": [
+      "Writer"
+    ]
+  },
+  {
+    "recruiters": "935",
+    "value": "Aircraft Pilot",
+    "tokens": [
+      "Aircraft",
+      "Pilot"
+    ]
+  },
+  {
+    "recruiters": "287",
+    "value": "Editor",
+    "tokens": [
+      "Editor"
+    ]
+  },
+  {
+    "recruiters": "452",
+    "value": "Photographer",
+    "tokens": [
+      "Photographer"
+    ]
+  },
+  {
+    "recruiters": "588",
+    "value": "Actor",
+    "tokens": [
+      "Actor"
+    ]
+  }
+]

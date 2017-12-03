@@ -1,0 +1,280 @@
+// Headings
+
+h1, .h1, h2, .h2, h3, .h3,
+h4, .h4, h5, .h5, h6, .h6 {
+  line-height: 1.4;
+  margin: 0;
+}
+
+h1, .h1 {
+  font-size: 37px;
+  font-weight: $light;
+  color: $darkGray;
+}
+
+h2, .h2 {
+  font-size: 34px;
+  font-weight: $light;
+  color: $darkGray;
+}
+
+h3, .h3 {
+  font-size: 31px;
+  font-weight: $light;
+  color: $darkGray;
+}
+
+h4, .h4 {
+  font-size: 27px;
+  font-weight: $normal;
+  color: $darkGray;
+
+  .note {
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 14px;
+    color: $gray;
+  }
+}
+
+h5, .h5 {
+  font-size: 24px;
+  font-weight: $normal;
+  color: $darkGray;
+
+  &.has-dash {
+    position: relative;
+    padding: 0 0 14px;
+
+    &:after {
+      content: "";
+      display: block;
+      @include position(absolute, null null 0 0);
+      @include size(32px 3px);
+      border-radius: 2px;
+      background: $brandBlue;
+    }
+  }
+}
+
+h6, .h6 {
+  font-size: 20px;
+  font-weight: $normal;
+  color: $darkGray;
+
+  .note {
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 14px;
+    color: $gray;
+  }
+}
+
+.labeled-divider {
+  position: relative;
+
+  span {
+    display: inline-block;
+    background: white;
+    padding: 0 15px 0 0;
+
+    color: $gray;
+    font-weight: $bold;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    @include position(absolute, 21px 0 null);
+    z-index: -1;
+    height: 2px;
+    background: $whiteGray;
+  }
+}
+
+// Paragraphs
+
+p { margin: 0; }
+
+.content {
+  p {
+    margin: 0 0 15px;
+
+    &:last-child { margin: 0; }
+  }
+}
+
+// Links
+
+a, button { cursor: pointer; }
+
+.unstyled {
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: 0 none;
+}
+
+.link { font-weight: $bold; }
+
+.link-underlined {
+  position: relative;
+  border-bottom: 1px solid $brandBlue;
+}
+
+.link-edin {
+  color: $linkedin;
+  border-bottom-color: $linkedin;
+}
+
+.link-gray {
+  color: $gray;
+  border-bottom-color: $gray;
+}
+
+.link-mediumGray {
+  color: $mediumGray;
+  border-bottom-color: $mediumGray;
+}
+
+.link-report {
+  color: $report;
+  border-bottom-color: $report;
+}
+
+.link-xs { font-size: 11px; }
+
+// Expand
+
+.expandlink {
+  position: relative;
+  opacity: 0.7;
+  @include transition(opacity 0.2s ease);
+
+  .sprite {
+    @include transition(transform $transitionsTiming ease, opacity $transitionsTiming ease);
+  }
+
+  .s-expand-sm-18-primary { opacity: 0; }
+
+  &[aria-expanded="true"],
+  &:hover, &:focus { opacity: 1; }
+
+  &[aria-expanded="true"] {
+    color: $brandBlue;
+
+    .sprite { @include transform(rotate(-180deg) translateY(1px)); }
+
+    .s-expand-sm-18-mediumGray { opacity: 0; }
+    .s-expand-sm-18-primary { opacity: 1; }
+  }
+}
+
+.expandlink-xs {
+  position: relative;
+  padding-right: 16px;
+
+  font-size: 14px;
+  font-weight: $bold;
+
+  .sprite {
+    @include position(absolute, 50% 0 null null);
+    margin: -4px 0 0;
+  }
+}
+
+.expandlink-gray { color: $gray; }
+.expandlink-mediumGray { color: $mediumGray; }
+
+// Back
+
+.back {
+  position: relative;
+  cursor: pointer;
+
+  border: 0 none;
+  background: none;
+  margin: 0;
+  padding: 5px 5px 4px;
+
+  > span {
+    position: absolute;
+
+    border: 2px solid $lightestGray;
+    border-radius: 50%;
+
+    .sprite { position: absolute; }
+  }
+}
+
+.back-md {
+  padding-left: 41px;
+
+  font-size: 16px;
+  font-weight: $semibold;
+
+  > span {
+    left: 5px;
+    top: 3px;
+    @include size(27px);
+
+    .sprite {
+      top: 3px;
+      left: 3px;
+    }
+  }
+}
+
+.back-gray { color: $gray; }
+
+// Chevron
+
+.chevron {
+  .sprite {
+    position: relative;
+    display: inline-block;
+  }
+}
+
+.chevron-md {
+  font-size: 14px;
+  font-weight: $bold;
+
+  .sprite {
+    top: 1px;
+    margin: 0 3px 0 -1px;
+  }
+}
+
+.chevron-gray { color: $gray; }
+
+// Chevron CTA
+
+.chevroncta {
+  .sprite {
+    position: relative;
+    display: inline-block;
+
+    @include transition(transform $transitionsTiming ease);
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    .sprite { @include transform(translateX(2px)); }
+  }
+}
+
+.chevroncta-md {
+  font-size: 14px;
+  font-weight: $bold;
+
+  .sprite {
+    top: 1px;
+    margin: 0 3px 0 1px;
+  }
+}
+
+.chevroncta-primary { color: $brandBlue; }

@@ -1,0 +1,42 @@
+.checkbox {
+  input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  label {
+    cursor: pointer;
+
+    input:checked ~ .checkbox-custom {
+      background: $brandBlue;
+      border-color: $brandBlue;
+
+      .s-checkbox {
+        opacity: 1;
+        visibility: visible;
+
+        @include transform(rotate(0) scale(1));
+      }
+    }
+  }
+}
+
+.checkbox-custom {
+  display: inline-block;
+  @include size(17px);
+
+  border: 2px solid $inputBorderColor;
+  border-radius: 3px;
+
+  @include transition(background 0.2s ease, border-color 0.2s ease);
+
+  .s-checkbox {
+    opacity: 0;
+    visibility: hidden;
+
+    @include transform(rotate(-20deg) scale(0.75));
+
+    @include transition(transform 0.2s ease, opacity 0.2s ease, visibility 0.2s ease);
+  }
+}

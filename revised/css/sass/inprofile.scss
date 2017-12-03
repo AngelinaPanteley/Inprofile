@@ -1,0 +1,210 @@
+/*
+ * Inprofile, by Santz Co. (Santiago Baigorria, santiago@santz.co)
+ *
+ * Canada & Argentina
+ * Copyright 2017/18 | Inprofile, Inc.
+ *
+ * www.inprofile.com
+ * product@inprofile.com
+ */
+
+/*
+ * Bourbon
+ */
+
+  @import "bourbon/bourbon";
+
+/*
+ * Box Sizing
+ */
+
+  *, *:after, *:before {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+
+    @include box-sizing(border-box);
+  }
+
+/*
+ * Normalize
+ */
+
+  @import "modules/normalize";
+
+/*
+ * Variables
+ */
+
+  $candidateBlue:           #8BD4FC;
+  $recruiterBlue:           #1E9BFF;
+  $employerBlue:            #215FFF;
+
+  $brandBlue:               $recruiterBlue;
+  $brandBlueAccent:         darken($brandBlue, 7.5%);
+
+  $darkestGray:             #14374E; // 7
+  $darkGray:                #2D526A; // 6
+  $mediumGray:              #87A9BF; // 5
+  $gray:                    #B2C9D9; // 4
+  $lightGray:               #D7E5EE; // 3
+  $lightestGray:            #EEF2F8; // 2
+  $whiteGray:               #F4F6F9; // 1
+
+  $danger:                  #F56589;
+
+  $btnTextShadow:           0 1px 0 rgba(20, 55, 78, 0.1);
+  $dropdownShadow:          0 1px 5px rgba(20, 55, 78, 0.1);
+  $userDropdownShadow:      0 2px 14px rgba(20, 55, 78, 0.1);
+  $headerSearchShadow:      0 6px 16px rgba(4, 16, 23, 0.08);
+
+  $linkedin:                #0077B5;
+  $report:                  #F7B268;
+
+  $inputBorderColor:        #D7E5EE;
+  $inputPlaceholder:        #B2C9D9;
+  $inputBorderRadius:       5px;
+
+  $textColor:               $mediumGray;
+  $linkColor:               $brandBlue;
+  $fontSize:                16px;
+  $lineHeight:              1.5;
+  $sansSerif:               'Nunito', sans-serif;
+  $serif:                   'Times New Roman', serif;
+
+  $black:                   900;
+  $extrabold:               800;
+  $bold:                    700;
+  $semibold:                600;
+  $normal:                  400;
+  $light:                   300;
+  $extralight:              200;
+
+  $bodyBg:                  white;
+  $selectionBg:             $brandBlue;
+  $selectionColor:          white;
+
+  $transitionsTiming:       0.3s;
+
+  $cursorDisabled:          not-allowed;
+
+/*
+ * Main
+ */
+
+  body {
+    font: $normal $fontSize $sansSerif;
+    line-height: $lineHeight;
+    color: $textColor;
+    background: $bodyBg;
+    min-width: 320px;
+
+
+    .devbranch {
+      @include position(fixed, null null 10px 10px);
+      z-index: 999;
+
+      color: white;
+      font-size: 13px;
+      font-weight: $extrabold;
+
+      padding: 3px 7px 0;
+      background: $brandBlue;
+      border-radius: 2px;
+    }
+  }
+
+  .fullheight,
+  .fullheight body { height: 100%; }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  a {
+    text-decoration: none;
+    color: $linkColor;
+
+    @include transition(color $transitionsTiming ease);
+  }
+
+  ::-moz-selection {
+    background: $selectionBg;
+    color: $selectionColor;
+    text-shadow: none;
+  }
+
+  ::selection {
+    background: $selectionBg;
+    color: $selectionColor;
+    text-shadow: none;
+  }
+
+/*
+ * Plugins
+ */
+
+  @import "plugins/transition.js";
+
+  @import "plugins/modal.js";
+
+  @import "plugins/dropdowns.js";
+
+  @import "plugins/icheck.js";
+
+  @import "plugins/selectize.js";
+
+  @import "plugins/typeahead.js";
+
+  @import "plugins/tooltipster.js";
+
+/*
+ * Modules
+ */
+
+  @import "modules/fonts";
+
+  @import "modules/assets";
+
+  @import "modules/grid";
+
+  @import "modules/type";
+
+  @import "modules/buttons";
+
+  @import "modules/forms";
+
+  @import "modules/sprite";
+
+/*
+ * Specifics
+ */
+
+  @import "parts/header";
+
+  @import "parts/footer";
+
+  @import "parts/auth";
+
+  @import "parts/profile";
+
+  @import "parts/search";
+
+  @import "parts/survey";
+
+  @import "parts/start";
+
+  @import "parts/account";
+
+  @import "parts/ostap";
+
+  @import "parts/rubyroidlabs";
+
+/*
+ * Media
+ */
+
+  @import "modules/media";
+
+  @import "modules/retina";

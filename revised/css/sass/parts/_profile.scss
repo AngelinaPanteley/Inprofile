@@ -1,0 +1,288 @@
+.profile {}
+
+.profile-head {
+  padding: 40px;
+  position: relative;
+  color: $gray;
+}
+
+.profile-head-main { @include clearfix(); }
+
+.profile-avatar {
+  float: left;
+  @include size(200px);
+
+  img { border-radius: 5px; }
+}
+
+.profile-head-main-inner {
+  padding: 4px 0 0;
+  margin-left: 200px + 34px;
+
+  h3 { margin: 0 0 11px; }
+}
+
+.profile-head-meta {
+  font-size: 13px;
+  margin: 0 0 24px;
+  font-weight: $semibold;
+
+  > p {
+    display: inline-block;
+    padding: 3px 6px 0;
+  }
+}
+
+.profile-label {}
+
+.profile-works {
+  margin: 0 0 0 12px;
+
+  > a { margin: 0 0 0 1px; }
+}
+
+.profile-head-contact { margin: 0 0 14px; }
+
+.profile-contact-info {
+  font-size: 14px;
+  font-weight: $semibold;
+  margin-bottom: 7px;
+
+  &:last-child { margin-bottom: 0; }
+
+  span {
+    display: inline-block;
+    width: 54px;
+  }
+}
+
+.profile-twitter {
+  font-size: 14px;
+  font-weight: $semibold;
+
+  a {
+    color: $gray;
+
+    .sprite {
+      @include position(relative, 5px null null -2px);
+      display: inline-block;
+      margin-right: 2px;
+    }
+  }
+}
+
+.profile-head-score {
+  @include position(absolute, 40px 40px null null);
+  @include size(180px 200px);
+  text-align: center;
+  padding: 20px;
+  border: 2px solid $whiteGray;
+  border-radius: 5px;
+
+  h6 {
+    @include position(absolute, null 0 43px);
+
+    font-size: 16px;
+    font-weight: $semibold;
+  }
+
+  p {
+    @include position(absolute, null 0 18px);
+
+    color: $gray;
+    font-size: 14px;
+  }
+}
+
+.profile-head-scoregauge {}
+
+.profile-main {
+  position: relative;
+  // this will need to be done with JS, meeh...
+  // height: 100%;
+  height: 664px;
+  margin: 2px 0 0;
+  box-shadow: 0 -2px 0 $whiteGray;
+}
+
+.profile-score {
+  @include position(absolute, 0 null 0 0);
+  width: 402px;
+  border-right: 2px solid $whiteGray;
+  padding: 34px 40px 40px;
+}
+
+.profile-score-tabs {
+  margin: 0 0 23px;
+  padding: 0 0 10px;
+  border-bottom: 1px solid $whiteGray;
+
+  a {
+    position: relative;
+    margin-left: 28px;
+
+    font-size: 18px;
+    font-weight: $semibold;
+    color: $gray;
+
+    &:first-child { margin-left: 0; }
+
+    &:after {
+      content: "";
+      display: block;
+      @include position(absolute, null 0 -13px);
+      height: 2px;
+      border-radius: 1px;
+    }
+
+    &.is-active {
+      color: $brandBlue;
+
+      &:after { background: $brandBlue; }
+    }
+  }
+}
+
+.profile-score-explanation {
+  font-size: 14px;
+  margin: 0 0 14px;
+}
+
+.profile-score-breakdown {
+  margin: 0 -16px;
+  @include clearfix();
+}
+
+.profile-score-stat {
+  float: left;
+  margin: 0 16px;
+  font-size: 28px;
+  color: $darkGray;
+
+  .sprite {
+    @include position(relative, 2px null null);
+    display: inline-block;
+  }
+
+  sup { font-weight: $extrabold; }
+
+  span {
+    display: block;
+    font-size: 13px;
+    font-weight: $semibold;
+    color: $mediumGray;
+  }
+}
+
+.profile-radar {}
+
+.profile-timerange {}
+
+.profile-bubbles {
+  @include position(absolute, 0 0 0 402px);
+
+  &:before, &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 20;
+  }
+
+  &:before {
+    width: 2px;
+    top: 20px; bottom: 20px;
+    left: 50%;
+    margin-left: -1px;
+    background: -moz-linear-gradient(top, rgba(240, 242, 244, 0) 0%, rgba(240, 242, 244, 1) 10%, rgba(240, 242, 244, 1) 90%, rgba(240, 242, 244, 0) 100%);
+    background: -webkit-linear-gradient(top, rgba(240, 242, 244, 0) 0%, rgba(240, 242, 244, 1) 10%, rgba(240, 242, 244, 1) 90%, rgba(240, 242, 244, 0) 100%);
+    background: linear-gradient(to bottom, rgba(240, 242, 244, 0) 0%, rgba(240, 242, 244, 1) 10%, rgba(240, 242, 244, 1) 90%, rgba(240, 242, 244, 0) 100%);
+  }
+
+  &:after {
+    height: 2px;
+    left: 20px; right: 20px;
+    top: 50%;
+    margin-top: -1px;
+    background: -moz-linear-gradient(left, rgba(240, 242, 244, 0) 0%, rgba(240, 242, 244, 1) 10%, rgba(240, 242, 244, 1) 90%, rgba(240, 242, 244, 0) 100%);
+    background: -webkit-linear-gradient(left, rgba(240, 242, 244, 0) 0%, rgba(240, 242, 244, 1) 10%, rgba(240, 242, 244, 1) 90%, rgba(240, 242, 244, 0) 100%);
+    background: linear-gradient(to right, rgba(240, 242, 244, 0) 0%, rgba(240, 242, 244, 1) 10%, rgba(240, 242, 244, 1) 90%, rgba(240, 242, 244, 0) 100%);
+  }
+}
+
+.profile-bubble-set {
+  @include position(absolute, null);
+  @include size(50%);
+  padding: 34px 40px 40px;
+}
+
+.profile-bubble-set-positions   { top: 0; left: 0; }
+.profile-bubble-set-industries  { top: 0; right: 0; }
+.profile-bubble-set-locations   { bottom: 0; left: 0; }
+.profile-bubble-set-skills      { bottom: 0; right: 0; }
+
+.profile-bubbles-head {
+
+  h4 {}
+}
+
+// Profile Filter Bar
+
+.profile-filters {
+  @include position(fixed, 0 null null 0);
+  z-index: 100;
+  width: 100%;
+}
+
+.profile-filters-inner {
+  position: relative;
+  height: 88px;
+  background: white;
+  box-shadow: $userDropdownShadow;
+}
+
+.profile-filter-type { @include position(absolute, 32px null null 40px); }
+
+.profile-filter-bubbles {
+  @include position(absolute, 28px 150px null);
+  text-align: center;
+}
+
+.profile-filter-bubbles-inner { display: inline-block; }
+
+.profile-filter-bubble {
+  position: relative;
+  float: left;
+  height: 32px;
+  border-radius: 16px;
+
+  margin: 0 10px;
+  padding: 6px 28px 4px 13px;
+  background: $brandBlue;
+
+  color: white;
+  font-size: 14px;
+  font-weight: $extrabold;
+  text-shadow: $btnTextShadow;
+}
+
+.profile-filter-bubble-remove {
+  @include position(absolute, 1px 1px null null);
+  padding: 10px;
+
+  @include transition(transform 0.3s ease);
+
+  &:hover,
+  &:focus,
+  &.focus { @include transform(rotate(90deg)); }
+}
+
+.profile-filters-close {
+  @include position(absolute, 26px 29px null null);
+  padding: 10px;
+
+  @include transition(transform 0.3s ease);
+
+  &:hover,
+  &:focus,
+  &.focus { @include transform(rotate(90deg)); }
+}

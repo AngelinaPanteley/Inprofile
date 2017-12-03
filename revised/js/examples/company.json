@@ -1,0 +1,403 @@
+[
+  {
+    "year": "1961",
+    "value": "Walmart",
+    "tokens": [
+      "Walmart"
+    ]
+  },
+  {
+    "year": "1962",
+    "value": "Apple, Inc.",
+    "tokens": [
+      "Apple",
+      "Inc."
+    ]
+  },
+  {
+    "year": "1963",
+    "value": "Exxon Mobil",
+    "tokens": [
+      "Exxon",
+      "Mobil"
+    ]
+  },
+  {
+    "year": "1964",
+    "value": "Ford",
+    "tokens": [
+      "Ford"
+    ]
+  },
+  {
+    "year": "1965",
+    "value": "AXA",
+    "tokens": [
+      "AXA"
+    ]
+  },
+  {
+    "year": "1966",
+    "value": "Mercedes Benz",
+    "tokens": [
+      "Mercedes",
+      "Benz"
+    ]
+  },
+  {
+    "year": "1967",
+    "value": "Microsoft, Inc.",
+    "tokens": [
+      "Microsoft",
+      "Inc."
+    ]
+  },
+  {
+    "year": "1968",
+    "value": "Ralph Lauren",
+    "tokens": [
+      "Ralph",
+      "Lauren"
+    ]
+  },
+  {
+    "year": "1969",
+    "value": "Tommy Hilfiger",
+    "tokens": [
+      "Tommy",
+      "Hilfiger"
+    ]
+  },
+  {
+    "year": "1970",
+    "value": "CVS",
+    "tokens": [
+      "CVS"
+    ]
+  },
+  {
+    "year": "1971",
+    "value": "Abercrombie & Fitch",
+    "tokens": [
+      "Abercrombie",
+      "&",
+      "Fitch"
+    ]
+  },
+  {
+    "year": "1972",
+    "value": "Calvin Klein",
+    "tokens": [
+      "Calvin",
+      "Klein"
+    ]
+  },
+  {
+    "year": "1973",
+    "value": "La Dolfina",
+    "tokens": [
+      "La",
+      "Dolfina"
+    ]
+  },
+  {
+    "year": "1974",
+    "value": "John Walker & Sons",
+    "tokens": [
+      "John",
+      "Walker",
+      "&",
+      "Sons"
+    ]
+  },
+  {
+    "year": "1975",
+    "value": "Absolut Vodka",
+    "tokens": [
+      "Absolut",
+      "Vodka"
+    ]
+  },
+  {
+    "year": "1976",
+    "value": "Vince",
+    "tokens": [
+      "Vince"
+    ]
+  },
+  {
+    "year": "1977",
+    "value": "Black Lapel",
+    "tokens": [
+      "Black",
+      "Lapel"
+    ]
+  },
+  {
+    "year": "1978",
+    "value": "Victorinox",
+    "tokens": [
+      "Victorinox"
+    ]
+  },
+  {
+    "year": "1979",
+    "value": "Facebook, Inc.",
+    "tokens": [
+      "Facebook",
+      "Inc."
+    ]
+  },
+  {
+    "year": "1980",
+    "value": "Santz Co.",
+    "tokens": [
+      "Santz",
+      "Co."
+    ]
+  },
+  {
+    "year": "1981",
+    "value": "Inprofile, Inc.",
+    "tokens": [
+      "Inprofile",
+      "Inc."
+    ]
+  },
+  {
+    "year": "1982",
+    "value": "Grō Capital",
+    "tokens": [
+      "Grō",
+      "Capital"
+    ]
+  },
+  {
+    "year": "1983",
+    "value": "Beam Interactive",
+    "tokens": [
+      "Beam",
+      "Interactive"
+    ]
+  },
+  {
+    "year": "1984",
+    "value": "Medean",
+    "tokens": [
+      "Medean"
+    ]
+  },
+  {
+    "year": "1985",
+    "value": "Volkswagen Group",
+    "tokens": [
+      "Volkswagen",
+      "Group"
+    ]
+  },
+  {
+    "year": "1986",
+    "value": "Elite",
+    "tokens": [
+      "Elite"
+    ]
+  },
+  {
+    "year": "1987",
+    "value": "Dell",
+    "tokens": [
+      "Dell"
+    ]
+  },
+  {
+    "year": "1988",
+    "value": "Bombay Sapphire",
+    "tokens": [
+      "Bombay",
+      "Sapphire"
+    ]
+  },
+  {
+    "year": "1989",
+    "value": "GitHub",
+    "tokens": [
+      "GitHub"
+    ]
+  },
+  {
+    "year": "1990",
+    "value": "Slack, Inc.",
+    "tokens": [
+      "Slack",
+      "Inc."
+    ]
+  },
+  {
+    "year": "1991",
+    "value": "Levi's & Co.",
+    "tokens": [
+      "Levi's",
+      "&",
+      "Co."
+    ]
+  },
+  {
+    "year": "1992",
+    "value": "Bullhorn",
+    "tokens": [
+      "Bullhorn"
+    ]
+  },
+  {
+    "year": "1993",
+    "value": "Huge, Inc.",
+    "tokens": [
+      "Huge",
+      "Inc."
+    ]
+  },
+  {
+    "year": "1994",
+    "value": "Stripe, Inc.",
+    "tokens": [
+      "Stripe",
+      "Inc."
+    ]
+  },
+  {
+    "year": "1995",
+    "value": "Actuame",
+    "tokens": [
+      "Actuame"
+    ]
+  },
+  {
+    "year": "1996",
+    "value": "Owls Academy",
+    "tokens": [
+      "Owls",
+      "Academy"
+    ]
+  },
+  {
+    "year": "1997",
+    "value": "Parker",
+    "tokens": [
+      "Parker"
+    ]
+  },
+  {
+    "year": "1998",
+    "value": "Nike, Inc.",
+    "tokens": [
+      "Nike",
+      "Inc."
+    ]
+  },
+  {
+    "year": "1999",
+    "value": "Tom Ford",
+    "tokens": [
+      "Tom",
+      "Ford"
+    ]
+  },
+  {
+    "year": "2000",
+    "value": "Zigma",
+    "tokens": [
+      "Zigma"
+    ]
+  },
+  {
+    "year": "2001",
+    "value": "Hugo Boss",
+    "tokens": [
+      "Hugo",
+      "Boss"
+    ]
+  },
+  {
+    "year": "2002",
+    "value": "Grovemade",
+    "tokens": [
+      "Grovemade"
+    ]
+  },
+  {
+    "year": "2003",
+    "value": "General Electric",
+    "tokens": [
+      "General",
+      "Electric"
+    ]
+  },
+  {
+    "year": "2004",
+    "value": "Puma",
+    "tokens": [
+      "Puma"
+    ]
+  },
+  {
+    "year": "2005",
+    "value": "Toptal",
+    "tokens": [
+      "Toptal"
+    ]
+  },
+  {
+    "year": "2006",
+    "value": "Sean John",
+    "tokens": [
+      "Sean",
+      "John"
+    ]
+  },
+  {
+    "year": "2007",
+    "value": "The Coca Cola Company",
+    "tokens": [
+      "The",
+      "Coca",
+      "Cola",
+      "Company"
+    ]
+  },
+  {
+    "year": "2008",
+    "value": "Rockport",
+    "tokens": [
+      "Rockport"
+    ]
+  },
+  {
+    "year": "2009",
+    "value": "Honda Motors",
+    "tokens": [
+      "Honda",
+      "Motors"
+    ]
+  },
+  {
+    "year": "2010",
+    "value": "Mazda",
+    "tokens": [
+      "Mazda"
+    ]
+  },
+  {
+    "year": "2011",
+    "value": "Volvo",
+    "tokens": [
+      "Volvo"
+    ]
+  },
+  {
+    "year": "2012",
+    "value": "AMD",
+    "tokens": [
+      "AMD"
+    ]
+  }
+]

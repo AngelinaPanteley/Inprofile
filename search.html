@@ -1,0 +1,358 @@
+<!DOCTYPE HTML>
+<html lang="{{ config('app.locale') }}" prefix="og: http://ogp.me/ns#">
+<head>
+  <!-- Metadata -->
+    <meta charset="UTF-8">
+
+    <title>(App) Search @ Inprofile</title>
+
+    <meta name="description" content="We'll describe this page later, thank you.">
+    <meta name="author" content="Inprofile, Inc.">
+    <meta name="geo.placename" content="New York">
+    <meta name="geo.region" content="US">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+  <!-- CSS & Fonts -->
+    <link type="text/css" rel="stylesheet" href="revised/css/inprofile.css">
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900">
+
+  <!-- Favicon & iPhone Icon -->
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/apple-touch-icon-57px.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114px.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/images/apple-touch-icon-120px.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144px.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/apple-touch-icon-152px.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/images/apple-touch-icon-180px.png">
+
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!--[if IE]>
+    <meta name="X-UA-Compatible" content="IE=edge">
+  <![endif]-->
+
+  <!-- Others -->
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+    <meta name="apple-mobile-web-app-capable" content="no">
+</head>
+
+<body>
+  
+  <div id="app">
+
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="logo">
+          <a href="/">
+            <i class="sprite s-isologo-white"></i>
+            Inprofile: Empowering the recruiting industry
+          </a>
+        </h1>
+        <form id="headerSearch" class="header-search" name="header-search">
+          <div class="header-search-group">
+            <i class="sprite s-header-search"></i>
+            <input id="headerSearchInput" class="lean-control header-search-input" name="header-search-input" placeholder="Search for recruiters, companies, positions&hellip;">
+          </div>
+        </form>
+        <div class="header-user">
+          <div class="dropdown header-user-dropdown">
+            <button class="btn-unstyled dropdown-toggle" type="button" id="headerUser" data-toggle="dropdown">
+              <span class="header-user-toggle-avatar">
+                <img src="revised/images/Avatar.png">
+              </span>
+              <i class="sprite s-user-dropdown-arrow"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="headerUser">
+              <i class="sprite s-dropdown-menu-arrow-white"></i>
+              <div class="header-user-dropdown-head">
+                <span class="header-user-avatar">
+                  <img src="revised/images/Avatar.png">
+                </span>
+                <a href="#">Harvey Specter</a>
+              </div>
+              <nav class="header-user-dropdown-nav">
+                <a href="#">Account</a>
+                <a href="https://help.inprofile.com" target="_blank">Help</a>
+                <hr class="divider">
+                <a href="#">Sign out</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="search">
+      <form id="searchForm" class="search-form" name="search-form">
+        <fieldset>
+          <div class="search-group">
+            <i class="sprite s-search"></i>
+            <input id="searchInput" class="lean-control" placeholder="Search for recruiters, companies, positions&hellip;">
+            <span class="search-group-addon">
+              <button class="btn btn-search btn-primary" type="submit">Search</button>
+            </span>
+          </div>
+          <div class="search-advanced">
+            <div class="search-advanced-link-container">
+              <hr>
+              <span class="search-advanced-link">
+                <button class="btn-unstyled expandlink expandlink-mediumGray expandlink-xs" type="button" data-target="#SearchAdvanced" data-toggle="collapse" aria-expanded="false" aria-controls="SearchAdvanced">
+                  Advanced search
+                  <i class="sprite s-expand-sm-18-mediumGray"></i>
+                  <i class="sprite s-expand-sm-18-primary"></i>
+                </button>
+              </span>
+            </div>
+            <div id="SearchAdvanced" class="collapse search-advanced-collapse">
+              <div class="search-advanced-grid clearfix">
+                <div class="search-advanced-col">
+                  <select id="searchAdvancedPosition" class="select-small" placeholder="Position">
+                    <option value="">Position</option>
+                    <option value="1">UX Designer</option>
+                    <option value="2">Product Designer</option>
+                    <option value="3">UI Designer</option>
+                    <option value="4">Motion Designer</option>
+                    <option value="5">Creative Director</option>
+                    <option value="6">Designer</option>
+                    <option value="7">Product Manager</option>
+                    <option value="8" selected>FX Designer</option>
+                  </select>
+                </div>
+                <div class="search-advanced-col">
+                  <select id="searchAdvancedIndustry" class="select-small" placeholder="Industry">
+                    <option value="">Industry</option>
+                    <option value="1">Technology</option>
+                    <option value="2">Finance</option>
+                    <option value="3">Logistics</option>
+                    <option value="4">Real Estate</option>
+                  </select>
+                </div>
+                <div class="search-advanced-col">
+                  <select id="searchAdvancedLocation" class="select-small" placeholder="Location">
+                    <option value="">Location</option>
+                    <option value="1">Argentina</option>
+                    <option value="2">United States</option>
+                    <option value="3">Canada</option>
+                    <option value="4">Chile</option>
+                  </select>
+                </div>
+                <div class="search-advanced-col">
+                  <select id="searchAdvancedSkills" class="select-small" placeholder="Skills">
+                    <option value="">Skills</option>
+                    <option value="1">Sketch App</option>
+                    <option value="2">AutoCAD</option>
+                    <option value="3">FL Studio</option>
+                    <option value="4">Accounting</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search-suggest">
+            <div class="search-suggest-inner">
+              <p><a href="#">UX Design</a></p>
+              <p class="is-active"><a href="#">UI Design</a></p>
+              <p><a href="#">Interaction Design</a></p>
+              <p><a href="#">Motion Design</a></p>
+              <p><a href="#">Logo Design</a></p>
+              <p><a href="#">Buenos Aires</a></p>
+              <p><a href="#">Manhattan, NY</a></p>
+              <p><a href="#">Chicago, IL</a></p>
+              <p><a href="#">Mexico, DF</a></p>
+              <p><a href="#">Toronto</a></p>
+              <p><a href="#">San Pablo</a></p>
+            </div>
+            <p class="note">Click any tag to further filter your results</p>
+          </div>
+        </fieldset>
+      </form>
+      <div class="search-results">
+        <div class="search-results-filters">
+          <div class="search-results-filters-left">
+            <div class="dropdown lean-dropdown">
+              <button class="btn-unstyled dropdown-toggle" type="button" id="searchFilterRanking" data-toggle="dropdown">
+                All rankings
+                <i class="sprite s-expand-sm-18-mediumGray"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="searchFilterRanking">
+                <i class="sprite s-dropdown-menu-arrow-darkestGray"></i>
+                <nav class="lean-dropdown-nav">
+                  <a href="#">All rankings</a>
+                  <a href="#">A+ only</a>
+                  <a href="#">A only</a>
+                  <a href="#">B only</a>
+                  <a href="#">C only</a>
+                  <a href="#">D only</a>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="search-results-filters-right">
+            <div class="dropdown lean-dropdown">
+              <button class="btn-unstyled dropdown-toggle" type="button" id="searchFilterTime" data-toggle="dropdown">
+                Any time
+                <i class="sprite s-expand-sm-18-mediumGray"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="searchFilterTime">
+                <i class="sprite s-dropdown-menu-arrow-darkestGray"></i>
+                <nav class="lean-dropdown-nav">
+                  <a href="#">Any time</a>
+                  <a href="#">3 months</a>
+                  <a href="#">6 months</a>
+                  <a href="#">1 year</a>
+                  <a href="#">2 years</a>
+                  <a href="#">+3 years</a>
+                </nav>
+              </div>
+            </div>
+            <div class="dropdown lean-dropdown">
+              <button class="btn-unstyled dropdown-toggle" type="button" id="searchFilterSort" data-toggle="dropdown">
+                Sort by score
+                <i class="sprite s-expand-sm-18-mediumGray"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="searchFilterSort">
+                <i class="sprite s-dropdown-menu-arrow-darkestGray"></i>
+                <nav class="lean-dropdown-nav">
+                  <a href="#">Score</a>
+                  <a href="#">Reviews</a>
+                  <a href="#">A - Z</a>
+                  <a href="#">Z - A</a>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="search-result">
+          <div class="search-result-main">
+            <img class="search-result-avatar" src="revised/images/Bobby.png">
+            <div class="search-result-main-inner">
+              <h6><a href="#">Robert Axelrod</a></h6>
+              <div class="search-result-meta">
+                <p class="search-result-label label">Recruiter</p>
+                <p class="search-result-works">
+                Works at <a class="link link-underlined" href="#">Axe Capital</a>
+                </p>
+                <p class="search-result-score">
+                  Inprofile Score:
+                  <span class="score score-A score-xs">
+                    <b>A</b><span>+</span>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="search-result-data">
+            <div class="search-result-soft">
+            </div>
+            <div class="search-result-hard">
+              <div class="search-result-positions">
+                <p class="search-result-bubble" title="Bank Manager" data-tooltipster>BA</p>
+                <p class="search-result-bubble" title="Accountant" data-tooltipster>A</p>
+                <p class="search-result-bubble" title="Financial Advisor" data-tooltipster>FA</p>
+                <p class="search-result-bubble" title="Chief Executive Officer" data-tooltipster>CFO</p>
+              </div>
+              <div class="search-result-industries">
+                <p class="search-result-bubble" title="FinTech" data-tooltipster>FT</p>
+                <p class="search-result-bubble" title="Legal" data-tooltipster>LG</p>
+                <p class="search-result-bubble" title="Medical" data-tooltipster>MD</p>
+                <p class="search-result-bubble" title="Farming" data-tooltipster>FN</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="search-result">
+          <div class="search-result-main">
+            <img class="search-result-avatar" src="revised/images/Donald.png">
+            <div class="search-result-main-inner">
+              <h6><a href="#">Donald Francis Draper</a></h6>
+              <div class="search-result-meta">
+                <p class="search-result-label label">Recruiter</p>
+                <p class="search-result-works">
+                Works at <a class="link link-underlined" href="#">Sterling Cooper</a>
+                </p>
+                <p class="search-result-score">
+                  Inprofile Score:
+                  <span class="score score-A score-xs">
+                    <b>A</b><span>+</span>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="search-result-data">
+            <div class="search-result-soft">
+            </div>
+            <div class="search-result-hard">
+              <div class="search-result-positions">
+                <p class="search-result-bubble" title="Telemarketer" data-tooltipster>MK</p>
+                <p class="search-result-bubble" title="Administrator" data-tooltipster>AD</p>
+                <p class="search-result-bubble" title="Broadcast Executive" data-tooltipster>BE</p>
+                <p class="search-result-bubble" title="Creative Designer" data-tooltipster>CD</p>
+              </div>
+              <div class="search-result-industries">
+                <p class="search-result-bubble" title="Education" data-tooltipster>ED</p>
+                <p class="search-result-bubble" title="Defense Logistics" data-tooltipster>DL</p>
+                <p class="search-result-bubble" title="Hedge Funds" data-tooltipster>HF</p>
+                <p class="search-result-bubble" title="Oil & Gas" data-tooltipster>OG</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="search-result-pagination">
+        <ul class="pagination">
+          <li class="disabled">
+            <a href="#">
+              <i class="sprite s-pagination-prev"></i>
+            </a>
+          </li>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li>
+            <a href="#">
+              <i class="sprite s-pagination-next"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <nav class="footer-navigation">
+          <a href="#">About</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Send feedback</a>
+        </nav>
+        <div class="footer-copyright">
+          <p>© 2017 Inprofile, Inc.</p>
+        </div>
+      </div>
+    </footer>
+  
+  </div>
+
+  <!-- Scripts (development) -->
+
+    <script type="text/javascript" src="revised/js/jquery.js"></script>
+    <script type="text/javascript" src="revised/js/bootstrap.js"></script>
+    <script type="text/javascript" src="revised/js/handlebars.js"></script>
+    <script type="text/javascript" src="revised/js/typeahead.js"></script>
+    <script type="text/javascript" src="revised/js/selectize.js"></script>
+    <script type="text/javascript" src="revised/js/tooltipster.js"></script>
+    <script type="text/javascript" src="revised/js/custom.js"></script>
+
+</body>
+</html>
