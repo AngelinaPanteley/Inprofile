@@ -4189,7 +4189,8 @@ input[type="checkbox"] {
   padding: 10px 11px 10px; }
 
 .cancel-link {
-  color: #B2C9D9; }
+  color: #B2C9D9;
+  font-weight: 700; }
 
 .account-box-integration {
   position: relative;
@@ -4243,6 +4244,8 @@ input[type="checkbox"] {
     width: -webkit-calc(83% - 3px);
     width: calc(83% - 3px);
     float: left; }
+  .account-connected-integration-grid:last-child {
+    margin-bottom: -8px; }
 
 .account-box-integration-footer {
   border-top: 1px solid #EEF2F8;
@@ -4253,7 +4256,7 @@ input[type="checkbox"] {
 .account-box-integration-label {
   color: #87A9BF;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 28px; }
 
 .account-box-integration-key {

@@ -7,6 +7,7 @@
 .cancel-link {
   @extend .btn-xs;
   color: $gray;
+  font-weight: $bold;
 }
 
 .account-box-integration {
@@ -68,6 +69,8 @@
     @include calc(width, "83% - 3px");
     float: left;
   }
+
+  &:last-child { margin-bottom: -8px; }
 }
 
 .account-box-integration-footer {
@@ -80,7 +83,7 @@
 .account-box-integration-label {
   color: $mediumGray;
   font-size: 12px;
-  font-weight: $semibold;
+  font-weight: $bold;
   line-height: 28px;
 }
 
